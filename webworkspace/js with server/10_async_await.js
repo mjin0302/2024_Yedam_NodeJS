@@ -1,8 +1,9 @@
 // 10_async_await.js
 
-// 함수 내부는 동기식이 맞음
-//
+
+// async와 await는 짝꿍!!
 async function getPostInfo() {
+   // & 함수 내부는 동기식이 맞음
    let postList = await fetch('https://jsonplaceholder.typicode.com/posts')
                         .then(res => res.json());
 
@@ -16,6 +17,6 @@ async function getPostInfo() {
    console.log(post)
 }
 
-// 함수자체는 동기식이 맞으나 밖에서 보면 비동기 작업이다.
+// & 함수자체는 동기식이 맞으나 밖에서 보면 비동기 작업이다.
 console.log(getPostInfo());
 console.log("코드 종료");
