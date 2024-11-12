@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
    res.send("Server Connect");   // & 해당 경로로 접근 할 경우 어떤식으로 응답을 할껀지?
 });
 
+// & 3000 -> 포트번호
 app.listen(3000, () => {
    console.log("서버가 실행됩니다.");
    console.log("http://localhost:3000");
