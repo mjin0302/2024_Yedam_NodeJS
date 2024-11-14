@@ -1,5 +1,4 @@
 // app.js
-
 const express = require("express");
 const app = express();
 const mysql = require("./mapper.js");
@@ -42,8 +41,12 @@ app.post("/customers", async (req, res) => {
 });
 
 // 수정
-app.put("/customers/:id", (req, res) => {
+app.put("/customers/:id", async (req, res) => {
+   let newObj = req.body; // {}
+   let selected = req.params.id;
 
+   let info = await mysql.query("customerUpdate", [newObj, selected])
+   res.send(info);
 });
 
 // 삭제
