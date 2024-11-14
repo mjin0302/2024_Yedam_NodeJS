@@ -41,6 +41,16 @@ app.post("/customers", async (req, res) => {
 });
 
 // 수정
+/**
+ * "fieldCount": 0,
+   "affectedRows": 1,
+   "insertId": 0,
+   "serverStatus": 2,
+   "warningCount": 0,
+   "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+   "protocol41": true,
+   "changedRows": 1
+*/
 app.put("/customers/:id", async (req, res) => {
    let newObj = req.body; // {}
    let selected = req.params.id;
