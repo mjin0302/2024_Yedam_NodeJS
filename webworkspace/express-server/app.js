@@ -102,12 +102,13 @@ server.get("/", (req, res) => {
 /*
    ? req.params => 처리대상 : pathvariable (params 처리라서 원하는 대로 변수 이름을 지정 할 수 있다.)
    ? req.body   => 처리대상 : JSON
-   ? req.qrery  => QueryString
+   ? req.query  => QueryString
    
    & Content-type
    1) application/x-www-form-urlencoded
    => QueryString(질의 문자열) : key = value&key=value&...
-   => req.query 속성
+   => req.query 속성 : GET
+   => req.body 속성 : POST
 
    2) application/json
    => JSON : {} or []
