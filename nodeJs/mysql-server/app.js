@@ -1,7 +1,10 @@
 // app.js
+require("dotenv").config({ path : "./database/mysql.env"});
+console.log(process.env);
+
 const express = require("express");
 const app = express();
-const mysql = require("./mapper.js");
+const mysql = require("./database/mapper.js");
 
 // content-type : application/json
 app.use(express.json());
