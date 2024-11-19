@@ -6,6 +6,7 @@ import DataBinding from '@/views/DataBinding.vue';
 import ListBinding from '@/views/ListBinding.vue';
 import IfBinding from '@/views/IfBinding.vue';
 import OnEvent from '@/views/OnEvent.vue';
+import ComputeWatch from '@/views/ComputedWatch.vue'
 
 const routes = [
   {
@@ -40,7 +41,12 @@ const routes = [
     path : "/onEvent",  // 경로
     name : "onEvent",      // 해당 경로의 이름 별칭 같은 느낌?
     component : OnEvent
-  }
+  },
+  {
+    path : "/comWatch",  // 경로
+    name : "comWatch",      // 해당 경로의 이름 별칭 같은 느낌?
+    component : ComputeWatch
+  },
 ]
 
 const router = createRouter({

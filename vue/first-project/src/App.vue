@@ -3,12 +3,13 @@
 <template>
   <nav>
     <a href="http://www.naver.com">네이버  |  </a> <!-- http가 붙어 있으면 절대경로이다 ?-->
-    <router-link to="/">Home  |  </router-link> <!-- 상대 경로는 vue의 라우터를 거친다 ? -->
+    <router-link to="/"> Home  |  </router-link> <!-- 상대 경로는 vue의 라우터를 거친다 ? -->
     <router-link to="/about">About  |  </router-link>
-    <router-link to="/data-binding">DataBinding  |  </router-link>
-    <router-link v-bind:to="{ name : 'listBind' }">ListBinding  |  </router-link>
-    <router-link :to="{ path : 'ifBinding' }">IfBinding</router-link>
-    <router-link to="/onEvent">OnEvent</router-link>
+    <router-link to="/data-binding"> DataBinding  |  </router-link>
+    <router-link v-bind:to="{ name : 'listBind' }"> ListBinding  |  </router-link>
+    <router-link :to="{ path : 'ifBinding' }"> IfBinding  |  </router-link>
+    <router-link to="/onEvent"> OnEvent  |  </router-link>
+    <router-link to="/comWatch"> ComputedWatch  |  </router-link>
   </nav>
   <h1>모든 페이지에 출력</h1>
   <router-view/>  <!-- 현재에 맞는 component -->
