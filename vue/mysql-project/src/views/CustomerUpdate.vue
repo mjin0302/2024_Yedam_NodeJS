@@ -1,6 +1,4 @@
 <!-- views/CustomerUpdate.vue -->
-
-<!-- views/CustomerAdd.vue -->
 <!-- 여기는 page. -->
 
 <template>
@@ -61,8 +59,23 @@
          },
          // 2) 사용자가 버튼을 클릭했을 때 입력한 부분을 서버로 넘겨서 저장 ~~
          // => 등록
-         updateCustomer() {
-
+         async updateCustomer() {
+            // 이미 있는 객체에서 빼는건 어렵지만, 새로운 데이터를 만들어서 보내는건 쉽다 
+            // 그러므로 저장할 데이터를 객체로 새로 생성해서 넘길꺼다
+            let updateData = {
+               name : this.info.name,
+               email : this.info.email,
+               phone : this.info.phone,
+               address : this.info.address
+            }
+            let result = await axios.put(`/api/customers/${this.info.id}`, updateData)
+                                    .catch(err => console.log(err))
+            let sqlRes = result.data;
+            if(sqlRes.changedRows > 0) {
+               alert('수정되었습니다.');
+            } else {
+               alert('수정되지 않았습니다.');
+            }
          }
 
       }

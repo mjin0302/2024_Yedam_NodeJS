@@ -25,7 +25,7 @@ const routes = [
     component : CustomerAdd
   },
   {
-    path : "/customerUpdate:customerId",  // params
+    path : "/customerUpdate/:customerId",  // params
     name : "customerUpdate",
     component : CustomerUpdate
   }
