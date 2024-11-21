@@ -71,7 +71,6 @@
       created() {
          // customerList에서 query로 값을 넘겼기 때문에 query로 받아야한다
          // route는 component 별로 분리된 네트워크정보
-         
          let selected = this.$route.query.customerId;
          this.getCustomerInfo(selected);
       },
@@ -83,9 +82,7 @@
          },
          async delInfo() {
             let result = await axios.delete(`/api/customers/${this.customer.id}`)
-                                    .catch(err => console.log(err));
-                                    
-            console.log(result.data);
+                                    .catch(err => console.log(err));                                    
             let sqlRes = result.data;
             if(sqlRes.affectedRows >= 1 && sqlRes.changedRows == 0) {
                alert("정상적으로 처리되었습니다.");
@@ -103,5 +100,6 @@
          },
 
       }
+
    }
 </script>

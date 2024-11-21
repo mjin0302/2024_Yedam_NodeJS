@@ -1,6 +1,4 @@
 <!-- views/CustomerList.vue -->
-<!--  -->
-<!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
 <template>
    <div class="container">
       <table class="table text-center">
@@ -70,7 +68,7 @@ import axios from 'axios'; // => Ajax 언제끝날지 명확하게 모른다 그
             // router을 사용해서 컴포넌트를 선택한다
             // router에 접근하고 싶으면 내 프로젝트 router폴더에 index.js를 찾아라 
             // 메뉴판 -> router, 메뉴 -> router폴더 안에 있는 것
-            this.$router.push({ name : 'customerInfo', query : { customerId : id } }) 
+            this.$router.push({ name : 'customerInfo', query : { customerId : id } });
 
             // params 방식 => /customerInfo/:customerId
             //  => pathvaliable방식은 무조건 값이 넘어가야 할 경우에만 사용해야한다 값이 똑바로 들어가지 않으면 찾지를 못한다
@@ -83,6 +81,8 @@ import axios from 'axios'; // => Ajax 언제끝날지 명확하게 모른다 그
             // 1) route의 path 속성 : '/target/:uId' => path에 정의가 먼저 되어야한다
             // 2) params : { uId : value } => /target/value 값이 무조건 있어야 하는 경우에는 params를 사용하자!! 
          }
+
       },
+
    }
 </script>
