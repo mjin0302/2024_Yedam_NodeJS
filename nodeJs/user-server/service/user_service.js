@@ -1,5 +1,6 @@
-// business 로직
+// Business 로직
 // service/user_service.js
+
 const mysql = require("../database/mapper.js"); // 쿼리문 작성한 파일 모듈로 불러오기
 
 // 전체조회

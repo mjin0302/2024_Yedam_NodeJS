@@ -57,7 +57,7 @@ import axios from 'axios'; // => Ajax 언제끝날지 명확하게 모른다 그
          async getCustomerList() {
             // result => 서버의 응답 + 네트워크 정보가 포함되어있다
             let result = await axios.get('/api/customers')  // http://localhost:8081/api/customers
-                                 .catch(err => console.log(err))
+                                    .catch(err => console.log(err))
             this.customerList = result.data; // 실제 서버가 응답한 데이터                              
          },
          goToCustomerInfo(id) {  // 단건조회 => 아이디 값을 어떻게 넘기냐? query와 params를 통해서 가능하지 ~

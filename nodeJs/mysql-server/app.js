@@ -1,4 +1,4 @@
-// app.js
+// app.js => route(control역활)
 require("dotenv").config({ path : "./database/mysql.env"});
 
 const express = require("express");
