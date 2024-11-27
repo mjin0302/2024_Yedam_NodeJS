@@ -56,6 +56,8 @@ export default {
             let result = await axios.get(`/api/boards/${searchNo}`)
                                     .catch(err => console.log(err));
             this.boardInfo = result.data;
+
+            this.boardInfo.created_date = this.dateFormat(this.boardInfo.created_date, 'yyyy-MM-dd');
         },
         getToday(){
 
@@ -64,7 +66,7 @@ export default {
             
         },  
         async boardUpdate(){
-
+            
         },
         dateFormat(value, format) {
             let date = value == null ? new Date() : new Date(value);
