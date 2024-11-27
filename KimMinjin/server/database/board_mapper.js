@@ -3,6 +3,7 @@
 const mysql = require("mysql");
 const sqlList = require("./sqls/board.js"); 
 
+console.log(process.env); // sqlㅇ 항목을 불러오는지 확인하기..  노드에서 디비에 접속할 때 권한 인코딩 하지않은 스타일로 p191
 const connectionPool = mysql.createPool({
    host : process.env.MYSQL_HOST,
    port : process.env.MYSQL_PORT,
